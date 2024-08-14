@@ -1,22 +1,28 @@
 
 // vocal, drum, bass, and other are volumes ranging from 0 to 100
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
-  background(20)
+  colourMode(HSB, 100);
+  background(255)
   textFont('Verdana'); // please use CSS safe fonts
-  rectMode(CENTER)
   textSize(24);
-  
-// ellipse(350, 200, 200, 200);
-// ellipse(650, 200, 200, 200);
+  rectMode(CENTER)
+  strokeWeight(9);
+  stroke(drum, 80, 80);
+ 
+var drumMap = parseInt (map(drum, 0, 100, 30, 90));
+var lengthOfLine = 300;
+var lineStart = 100;
+var lineEnd = lineStart = lengthOfLine;
+line(lineStart, 300, lineEnd, 300);
 
-let mouthSize = map(vocal, 0, 100, 60, 250);
-rect(500, mouthSize*3, mouthSize, mouthSize);
-rect(500, mouthSize, 400, mouthSize);
+
 
 }
 
 
-
+// let mouthSize = map(vocal, 0, 100, 60, 250);
+// rect(500, mouthSize*3, mouthSize, mouthSize);
+// rect(500, mouthSize, 400, mouthSize);
 
   //  let bar_spacing = height / 10;
   //  let bar_height = width / 12;
