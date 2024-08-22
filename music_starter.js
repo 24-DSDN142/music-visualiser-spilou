@@ -12,28 +12,20 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   textSize(24);
   rectMode(CENTER)
   strokeWeight(9);
-  stroke(drum, 80, 80);
+  stroke(vocal, 80, 80);
   console.log(counter);
  
 var vocalMap = map(vocal, 0, 100, 5, 70);
-var lengthOfLine = 300;
-var lineStart = 100;
-var lineEnd = lineStart + lengthOfLine;
+var lengthOfRect = 300;
+var rectStart = 100;
+var rectEnd = rectStart + lengthOfRect;
 
 for(var i = 1; i <= vocalMap; i ++){
-  var lineStep = i*10;
-  line(lineStart, lineStep, lineEnd, lineStep);
+  var rectStep = i*10;
+  rect(rectStart, rectStep, rectEnd, rectStep);
 }
 
-if(counter > 300 && counter < 500){
-  fill(0);
-}else{
-  fill(0, 255, 255);
-}
 
-for(let i = 1; i < 6; i ++){
-  ellipse(400, y * i, 100)
-}
 
 }
 
@@ -75,3 +67,20 @@ for(let i = 1; i < 6; i ++){
   //  textAlign(CENTER);
   //  textSize(vocal);
   //  text(words, width/2, height/3);
+
+
+  // if(counter > 300 && counter < 500){
+//   fill(0);
+// }else{
+//   fill(0, 255, 255);
+// }
+
+// for(let i = 1; i < 6; i ++){
+//   ellipse(400, y * i, 100)
+// }
+
+
+// for(var i = 1; i <= vocalMap; i ++){
+//   var lineStep = i*10;
+//   line(lineStart, lineStep, lineEnd, lineStep);
+// }
