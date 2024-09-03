@@ -15,8 +15,8 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   stroke(vocal, 80, 80);
   console.log(counter);
  
-var vocalMap = map(vocal, 0, 100, 5, 70);
-var lengthOfRect = 300;
+var vocalMap = map(vocal, 0, 125, 5, 70); //channel, idk, size (larger is smaller), idk, makes it smaller?
+var lengthOfRect = 100;
 var rectStart = 100;
 var rectEnd = rectStart + lengthOfRect;
 
@@ -25,7 +25,15 @@ for(var i = 1; i <= vocalMap; i ++){
   rect(rectStart, rectStep, rectEnd, rectStep);
 }
 
+var vocalMap = map(vocal, 0, 150, 5, 70); //channel, idk, size (larger is smaller), idk, makes it smaller?
+var lengthOfRect = 100;
+var rectStart = 500;
+var rectEnd = rectStart + lengthOfRect;
 
+for(var i = 1; i <= vocalMap; i ++){
+  var rectStep = i*10;
+  rect(rectStart, rectStep, rectEnd, rectStep);
+}
 
 }
 
