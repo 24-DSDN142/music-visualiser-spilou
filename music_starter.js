@@ -1,41 +1,60 @@
-
 // vocal, drum, bass, and other are volumes ranging from 0 to 100
 
-let img;
-let firstRun = true
-let y = 100
-
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
-  colorMode(HSB, 100);
-  background(25)
+  colorMode(RGB);
+  background(105, 74, 150)
   textFont('Verdana'); // please use CSS safe fonts
   textSize(24);
-  rectMode(CENTER)
-  strokeWeight(9);
-  stroke(vocal, 80, 80);
+  rectMode(CORNER)
+  strokeWeight(0);
+  
   console.log(counter);
  
-var vocalMap = map(vocal, 0, 125, 5, 70); //channel, idk, size (larger is smaller), idk, makes it smaller?
-var lengthOfRect = 100;
-var rectStart = 100;
-var rectEnd = rectStart + lengthOfRect;
+fill(48, 39, 115);
+var vocalMap = map(vocal, 0, 100, 400, 1000); 
+rect(0, 0, 150, vocalMap/1.1);
+rect(155, 0, 185, vocalMap/1.2);
+rect(345, 0, 165, vocalMap);
+rect(515, 0, 155, vocalMap/1.12);
+rect(675, 0, 170, vocalMap/1.3);
+rect(850, 0, 150, vocalMap/1.22);
 
-for(var i = 1; i <= vocalMap; i ++){
-  var rectStep = i*10;
-  rect(rectStart, rectStep, rectEnd, rectStep);
+fill(82, 74, 143);
+var otherMap = map(other, 0, 100, 300, 800);
+rect(0, 0, 190, otherMap);
+rect(195, 0, 200, otherMap/1.2);
+rect(400, 0, 215, otherMap/1.1);
+rect(620, 0, 210, otherMap/1.3);
+rect(835, 0, 170, otherMap/1.12);
+
+fill(116, 121, 171);
+var bassMap = map(bass, 0, 100, 200, 600);
+rect(0, 0, 240, bassMap/1.2);
+rect(245, 0, 255, bassMap/1.1);
+rect(505, 0, 230, bassMap);
+rect(740, 0, 260, bassMap/1.3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
-var vocalMap = map(vocal, 0, 150, 5, 70); //channel, idk, size (larger is smaller), idk, makes it smaller?
-var lengthOfRect = 100;
-var rectStart = 500;
-var rectEnd = rectStart + lengthOfRect;
 
-for(var i = 1; i <= vocalMap; i ++){
-  var rectStep = i*10;
-  rect(rectStart, rectStep, rectEnd, rectStep);
-}
+// let img;
+// let firstRun = true
+// let y = 100
 
-}
 
 // let mouthSize = map(vocal, 0, 100, 60, 250);
 // rect(500, mouthSize*3, mouthSize, mouthSize);
@@ -91,4 +110,21 @@ for(var i = 1; i <= vocalMap; i ++){
 // for(var i = 1; i <= vocalMap; i ++){
 //   var lineStep = i*10;
 //   line(lineStart, lineStep, lineEnd, lineStep);
+// }
+
+
+// fill(vocal, 80, 80);
+// for(var i = 1; i <= vocalMap; i ++){
+//   var rectStep = i*10;
+//   rect(rectStart, rectStep, rectEnd, rectStep);
+// }
+
+// vocalMap = map(vocal, 0, 100, 25, 80); 
+// var lengthOfRect2 = 100;
+// var rectStart2 = 500;
+// var rectEnd2 = rectStart2 + lengthOfRect2;
+
+// for(var i = 1; i <= vocalMap; i ++){
+//   var rectStep2 = i*10;
+//   rect(rectStart2, rectStep2, rectEnd2, rectStep2);
 // }
