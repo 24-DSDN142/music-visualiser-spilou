@@ -2,19 +2,21 @@
 
 let img1;
 let img2;
+let img3;
 let firstRun = true
 
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
   if(firstRun) {
     img1 = loadImage('drawing1.png');
     img2 = loadImage('drawing2.png');
+    img3 = loadImage('drawing3.png');
     firstRun = false
   }
 
   colorMode(RGB);
   background(146, 141, 180)
-  textFont('Verdana'); // please use CSS safe fonts
-  textSize(24);
+  // textFont('Verdana'); // please use CSS safe fonts
+  // textSize(24);
   rectMode(CORNER)
   strokeWeight(0);
 
@@ -98,17 +100,29 @@ rect(740, 0, 260, vocalMap/1.3);
 //gwen!!
 image(img1, 0, 700);
 
+//music note 1
+var otherMap1 = map(other, 0, 100, 60, 40);
+var spinAmount1 = map(other, 0, 100, -45, 45);
+
 push()
 
-translate(0, 0,)
-
-// var otherMap = map(other, 0, 100, 20, 50);
-
-image(img2, 825, 775, 50, 50);
+translate(825, 775)
+rotate(spinAmount1);
+image(img2, 0, 0, otherMap1, otherMap1);
 
 pop()
 
+//music note 2
+var otherMap2 = map(other, 0, 100, 30, 55);
+var spinAmount2 = map(other, 0, 100, 20, -45);
 
+push()
+
+translate(840, 730)
+rotate(spinAmount2);
+image(img3, 0, 0, otherMap2, otherMap2);
+
+pop()
 
 
 
