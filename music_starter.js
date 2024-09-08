@@ -3,24 +3,58 @@
 let img1;
 let img2;
 let img3;
-let firstRun = true
+let cloud1;
+let cloud2;
+let cloud3;
+let cloud4;
+let firstRun = true;
+var cloud1Move = 1;
+var cloud2Move = 1;
+var cloud3Move = 1;
+var cloud4Move = 1;
 
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
   if(firstRun) {
     img1 = loadImage('drawing1.png');
     img2 = loadImage('drawing2.png');
     img3 = loadImage('drawing3.png');
+    cloud1 = loadImage('cloud1.png');
+    cloud2 = loadImage('cloud2.png');
+    cloud3 = loadImage('cloud3.png');
+    cloud4 = loadImage('cloud4.png');
     firstRun = false
   }
 
   colorMode(RGB);
   background(146, 141, 180)
-  // textFont('Verdana'); // please use CSS safe fonts
-  // textSize(24);
   rectMode(CORNER)
   strokeWeight(0);
-
   console.log(counter);
+
+//clouds
+image(cloud3, -350+cloud3Move, 785, 325, 225);
+cloud3Move = cloud3Move + 0.4;
+if(cloud3Move > 1400){
+  cloud3Move = 0;
+}
+
+image(cloud4, -1000+cloud4Move, 675, 300, 200);
+cloud4Move = cloud4Move + 0.5;
+if(cloud4Move > 2000){
+  cloud4Move = 0;
+}
+
+image(cloud1, -250+cloud1Move, 750, 200, 150);
+cloud1Move = cloud1Move + 0.65;
+if(cloud1Move > 1300){
+  cloud1Move = 0;
+}
+
+image(cloud2, -800+cloud2Move, 625, 200, 150);
+cloud2Move = cloud2Move + 0.6;
+if(cloud2Move > 1800){
+  cloud2Move = 0;
+}
 
 //bassMap 
 var bassMap = map(bass, 0, 100, 700, 900); 
@@ -124,90 +158,4 @@ image(img3, 0, 0, otherMap2, otherMap2);
 
 pop()
 
-
-
-
-
-
-
-
 }
-
-
-// let img;
-// let firstRun = true
-// let y = 100
-
-
-// let mouthSize = map(vocal, 0, 100, 60, 250);
-// rect(500, mouthSize*3, mouthSize, mouthSize);
-// rect(500, mouthSize, 400, mouthSize);
-
-  //  let bar_spacing = height / 10;
-  //  let bar_height = width / 12;
-  //  let bar_pos_x = width / 2;
- 
-
-  //  // vocal bar is red
-  //  fill(200, 0, 0);
-  //  rect(bar_pos_x, height / 2 + 1 * bar_spacing, 4 * vocal, bar_height);
-  //  fill(0);
-  //  text("vocals", bar_pos_x, height / 2 + 1 * bar_spacing + 8);
- 
-  //  // drum bar is green
-  //  fill(0, 200, 0);
-  //  rect(bar_pos_x, height / 2 + 2 * bar_spacing, 4 * drum, bar_height);
-  //  fill(0);
-  //  text("drums", bar_pos_x, height / 2 + 2 * bar_spacing + 8);
- 
-  //  // bass bar is blue
-  //  fill(50, 50, 240);
-  //  rect(bar_pos_x, height / 2 + 3 * bar_spacing, 4 * bass, bar_height);
-  //  fill(0);
-  //  text("bass", bar_pos_x, height / 2 + 3 * bar_spacing + 8);
- 
-  //  // other bar is white
-  //  fill(200, 200, 200);
-  //  rect(bar_pos_x, height / 2 + 4 * bar_spacing, 4 * other, bar_height);
-  //  fill(0);
-  //  text("other", bar_pos_x, height / 2 + 4 * bar_spacing + 8);
-  //  fill(255, 255, 0);
- 
-  //  // display "words"
-  //  textAlign(CENTER);
-  //  textSize(vocal);
-  //  text(words, width/2, height/3);
-
-
-  // if(counter > 300 && counter < 500){
-//   fill(0);
-// }else{
-//   fill(0, 255, 255);
-// }
-
-// for(let i = 1; i < 6; i ++){
-//   ellipse(400, y * i, 100)
-// }
-
-
-// for(var i = 1; i <= vocalMap; i ++){
-//   var lineStep = i*10;
-//   line(lineStart, lineStep, lineEnd, lineStep);
-// }
-
-
-// fill(vocal, 80, 80);
-// for(var i = 1; i <= vocalMap; i ++){
-//   var rectStep = i*10;
-//   rect(rectStart, rectStep, rectEnd, rectStep);
-// }
-
-// vocalMap = map(vocal, 0, 100, 25, 80); 
-// var lengthOfRect2 = 100;
-// var rectStart2 = 500;
-// var rectEnd2 = rectStart2 + lengthOfRect2;
-
-// for(var i = 1; i <= vocalMap; i ++){
-//   var rectStep2 = i*10;
-//   rect(rectStart2, rectStep2, rectEnd2, rectStep2);
-// }
