@@ -1,43 +1,112 @@
 // vocal, drum, bass, and other are volumes ranging from 0 to 100
 
+let img1;
+let img2;
+let firstRun = true
+
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
+  if(firstRun) {
+    img1 = loadImage('drawing1.png');
+    img2 = loadImage('drawing2.png');
+    firstRun = false
+  }
+
   colorMode(RGB);
-  background(105, 74, 150)
+  background(146, 141, 180)
   textFont('Verdana'); // please use CSS safe fonts
   textSize(24);
   rectMode(CORNER)
   strokeWeight(0);
-  
+
   console.log(counter);
- 
-fill(48, 39, 115);
-var vocalMap = map(vocal, 0, 100, 400, 1000); 
-rect(0, 0, 150, vocalMap/1.1);
-rect(155, 0, 185, vocalMap/1.2);
-rect(345, 0, 165, vocalMap);
-rect(515, 0, 155, vocalMap/1.12);
-rect(675, 0, 170, vocalMap/1.3);
-rect(850, 0, 150, vocalMap/1.22);
 
-fill(82, 74, 143);
-var otherMap = map(other, 0, 100, 300, 800);
-rect(0, 0, 190, otherMap);
-rect(195, 0, 200, otherMap/1.2);
-rect(400, 0, 215, otherMap/1.1);
-rect(620, 0, 210, otherMap/1.3);
-rect(835, 0, 170, otherMap/1.12);
+//bassMap 
+var bassMap = map(bass, 0, 100, 700, 900); 
 
-fill(116, 121, 171);
-var bassMap = map(bass, 0, 100, 200, 600);
-rect(0, 0, 240, bassMap/1.2);
-rect(245, 0, 255, bassMap/1.1);
-rect(505, 0, 230, bassMap);
-rect(740, 0, 260, bassMap/1.3);
+fill(232, 224, 238);
 
+rect(0, 0, 155, bassMap/1.09);
+rect(155, 0, 190, bassMap/1.19);
+rect(345, 0, 170, bassMap/0.99);
+rect(515, 0, 160, bassMap/1.11);
+rect(675, 0, 175, bassMap/1.29);
+rect(850, 0, 155, bassMap/1.21);
 
+fill(135, 112, 159);
 
+rect(0, 0, 55, bassMap/1.09);
+rect(155, 0, 90, bassMap/1.19);
+rect(345, 0, 70, bassMap/0.99);
+rect(515, 0, 60, bassMap/1.11);
+rect(675, 0, 75, bassMap/1.29);
+rect(850, 0, 55, bassMap/1.21);
 
+rect(0, 0, 150, bassMap/1.1);
+rect(155, 0, 185, bassMap/1.2);
+rect(345, 0, 165, bassMap);
+rect(515, 0, 155, bassMap/1.12);
+rect(675, 0, 170, bassMap/1.3);
+rect(850, 0, 150, bassMap/1.22);
 
+//drumMap
+var drumMap = map(drum, 0, 100, 500, 750);
+
+fill(232, 224, 238);
+
+rect(0, 0, 195, drumMap/0.99);
+rect(195, 0, 205, drumMap/1.19);
+rect(400, 0, 220, drumMap/1.09);
+rect(620, 0, 215, drumMap/1.29);
+rect(835, 0, 175, drumMap/1.11);
+
+fill(94, 66, 110);
+
+rect(0, 0, 95, drumMap/0.99);
+rect(195, 0, 105, drumMap/1.19);
+rect(400, 0, 120, drumMap/1.09);
+rect(620, 0, 115, drumMap/1.29);
+rect(835, 0, 75, drumMap/1.11);
+
+rect(0, 0, 190, drumMap);
+rect(195, 0, 200, drumMap/1.2);
+rect(400, 0, 215, drumMap/1.1);
+rect(620, 0, 210, drumMap/1.3);
+rect(835, 0, 170, drumMap/1.12);
+
+//vocalMap
+var vocalMap = map(vocal, 0, 100, 200, 450);
+
+fill(232, 224, 238);
+
+rect(0, 0, 245, vocalMap/1.185);
+rect(245, 0, 260, vocalMap/1.09);
+rect(505, 0, 235, vocalMap/0.99);
+rect(740, 0, 265, vocalMap/1.285);
+
+fill(84, 51, 77);
+
+rect(0, 0, 145, vocalMap/1.185);
+rect(245, 0, 160, vocalMap/1.09);
+rect(505, 0, 135, vocalMap/0.99);
+rect(740, 0, 165, vocalMap/1.285);
+
+rect(0, 0, 240, vocalMap/1.2);
+rect(245, 0, 255, vocalMap/1.1);
+rect(505, 0, 230, vocalMap);
+rect(740, 0, 260, vocalMap/1.3);
+
+//gwen!!
+image(img1, 0, 700);
+
+push()
+
+translate(0, 0,)
+
+// var otherMap = map(other, 0, 100, 20, 50);
+
+image(img2, 825, 775, 50, 50);
+
+pop()
 
 
 
