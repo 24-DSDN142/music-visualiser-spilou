@@ -84,6 +84,15 @@ rect(515, 0, 155, bassMap/1.12);
 rect(675, 0, 170, bassMap/1.3);
 rect(850, 0, 150, bassMap/1.22);
 
+fill(129,92,132);
+
+rect(0, 0, 50, bassMap/1.09);
+rect(155, 0, 50, bassMap/1.19);
+rect(345, 0, 50, bassMap/0.99);
+rect(515, 0, 50, bassMap/1.11);
+rect(675, 0, 50, bassMap/1.29);
+rect(850, 0, 50, bassMap/1.21);
+
 //drumMap
 var drumMap = map(drum, 0, 100, 500, 750);
 
@@ -109,6 +118,14 @@ rect(400, 0, 215, drumMap/1.1);
 rect(620, 0, 210, drumMap/1.3);
 rect(835, 0, 170, drumMap/1.12);
 
+fill(87,61,88);
+
+rect(0, 0, 75, drumMap/0.99);
+rect(195, 0, 75, drumMap/1.19);
+rect(400, 0, 75, drumMap/1.09);
+rect(620, 0, 75, drumMap/1.29);
+rect(835, 0, 75, drumMap/1.11);
+
 //vocalMap
 var vocalMap = map(vocal, 0, 100, 200, 450);
 
@@ -131,8 +148,21 @@ rect(245, 0, 255, vocalMap/1.1);
 rect(505, 0, 230, vocalMap);
 rect(740, 0, 260, vocalMap/1.3);
 
+fill(60,40,68);
+
+rect(0, 0, 100, vocalMap/1.185);
+rect(245, 0, 100, vocalMap/1.09);
+rect(505, 0, 100, vocalMap/0.99);
+rect(740, 0, 100, vocalMap/1.285);
+
 //gwen!!
 image(img1, 0, 700);
+
+fill(232, 224, 238);
+rect(850, 931, 150, 7);
+
+fill(66,24,54);
+rect(0, 961, 250, 39);
 
 //music note 1
 var otherMap1 = map(other, 0, 100, 60, 40);
